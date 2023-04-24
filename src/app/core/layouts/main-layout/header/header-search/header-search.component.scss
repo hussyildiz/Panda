@@ -1,12 +1,36 @@
+@import "/src/assets/styles/panda-variables.scss";
+
+.input-group-text{
+    background-color: $fills-secondary-off-white;
+    border:none;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    padding-left: 20px;
+
+    i{
+        color: $fills-secondary-gray-secondary;
+    }
+}
+
 input{
     border-radius: 24px;
     border:none;
-    background-color: #f5f4f6;
-
+    background-color: $fills-secondary-off-white;
+    min-height: 40px;
     &:focus{
         border: none;
-        background-color: #f5f4f6;
+        background-color: $fills-secondary-off-white;
         box-shadow: none;
+    }
+
+    &::placeholder{
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color:$fills-secondary-gray-secondary;
     }
 }
 
@@ -16,4 +40,183 @@ input{
 
 .dropdown-toggle::after{
     content: none;
+}
+
+.notification-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .notification-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        min-width: 40px;
+        i{
+            font-size: 18px;
+            color: $fills-secondary-panda-black;
+        }
+
+        &:hover{          
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $fills-secondary-off-white;
+            border-radius: 25px;
+        }
+
+        .notification-item-content{
+            border:none;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            width: 360px;
+
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
+
+            .notification-item-content-header{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+
+                height: 60px;
+                background-color: #f8f8f8;
+
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+
+                border-bottom: 2px solid $fills-primary-panda-red;
+            }
+
+            .notification-item-content-body{
+                height: 290px;
+                max-height: 290px;
+                overflow-y: auto;    
+                overflow-x: hidden;
+                
+                .dropdown-item{
+                    height: 90px;
+                    width: 340px;
+                    white-space:normal;
+                    
+                    .header{
+                        .title{
+                            font-size: 12px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.33;
+                            letter-spacing: 0.4px;
+                            color: $fills-secondary-gray-primary;
+                        }
+                        .time{
+                            font-size: 12px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.33;
+                            letter-spacing: 0.4px;
+                            color: $fills-secondary-gray-primary;
+                        }                        
+                    }
+                    .content{
+                        word-wrap: break-word;
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.43;
+                        letter-spacing: normal;
+                        color: $illustration-grey-04;
+                        word-wrap: break-word;
+                    }
+
+                    &.unread{
+                        background-color: rgba(255, 165, 100, 0.1);                       
+                    }
+                }
+            }
+
+            .notification-item-content-footer{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $fills-secondary-off-white;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                min-height: 40px;
+                border-top: 1px solid $fills-secondary-gray-tertiary;
+
+                .footer-link{
+                    display: flex;
+                    align-items: center;
+
+                    font-size: 12px;
+                    font-weight: 500;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.33;
+                    letter-spacing: 0.4px;
+                    color: $fills-secondary-gray-primary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .badge-font-size{
+        font-size: 8px;
+    }
+    
+}
+
+.item-left-mobile{
+    width: 60%;
+}
+
+.item-left-tablet{
+    width: 78%;
+}
+
+.item-left-desktop{
+    width: 88%;
+}
+
+.item-right-mobile{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    padding-right: 0px;
+}
+
+.item-right-tablet{
+    display: flex;
+    justify-content: flex-end;
+    width: 22%;
+    padding-right: 0px;
+}
+
+.item-right-desktop{
+    display: flex;
+    justify-content: flex-end;
+    width: 12%;
+    padding-right: 0px;
 }

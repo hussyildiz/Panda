@@ -1,0 +1,8 @@
+@import "../styles/panda-variables.scss";
+
+html, body { height: 100%; }
+
+body{
+    background-color: $fills-secondary-off-white;
+    font-family: $font-family;
+}

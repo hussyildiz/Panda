@@ -1,5 +1,7 @@
+@import "/src/assets/styles/panda-variables.scss";
+
 header{
-    border-top: 4px solid #dc0005;
+    border-top: 4px solid $fills-primary-panda-red;
     min-height: 165px;
-    background-color: #fff;
+    background-color: $fills-primary-panda-white;
 }

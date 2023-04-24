@@ -1,50 +1,319 @@
-<div class="row">
-    <div class="col-8">
-        <div class="mt-2 mb-2">
-          <input type="text" class="form-control" placeholder="Arama">
+<div class="row d-flex align-items-center justify-content-between">
+    <div [ngClass]="{ 'item-left-mobile': deviceType == 'mobile', 'item-left-tablet' : deviceType == 'tablet', 'item-left-desktop' : deviceType == 'desktop'}">
+        <div class="input-group mt-2 mb-2">
+            <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control" placeholder="Arama" aria-label="Arama" aria-describedby="basic-addon1">
         </div>
     </div>
-    <div class="col-4">        
-        <div class="row">
-            <div class="col-3">
-                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <div [ngClass]="{ 'item-right-mobile': deviceType == 'mobile', 'item-right-tablet' : deviceType == 'tablet', 'item-right-desktop' : deviceType == 'desktop'}">
+        <div class="notification-container" [ngClass]="{ 'pe-2': deviceType == 'mobile'}">            
+            <div class="notification-item position-relative" [ngClass]="{ 'px-1': deviceType == 'mobile', 'px-2' : (deviceType == 'desktop' || deviceType == 'tablet' )}">
+                <a href="#" class="dropdown-toggle" role="button" data-bs-toggle="dropdown">
                     <i class="bi bi-clock"></i>
+                    <span class="position-absolute translate-middle badge badge-font-size rounded-pill bg-danger">1</span>
                 </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="notification-item-content dropdown-menu dropdown-menu-lg-end">
+                    <div class="notification-item-content-header">
+                        Bekleyen İşler
+                    </div>
+                    <div class="notification-item-content-body">
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="notification-item-content-footer">
+                        <a href="#" class="footer-link"><i class="bi bi-envelope-paper me-2"></i> Hepsi okundu say</a>
+                        <a href="#" class="footer-link">Tümü</a>
+                    </div>
                 </ul>
             </div>
-            <div class="col-3">
-                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="notification-item position-relative" [ngClass]="{ 'px-1': deviceType == 'mobile', 'px-2' : (deviceType == 'desktop' || deviceType == 'tablet' )}">
+                <a href="#" class="dropdown-toggle" role="button" data-bs-toggle="dropdown">
                     <i class="bi bi-bookmark"></i>
+                    <span class="position-absolute translate-middle badge badge-font-size rounded-pill bg-danger">41</span>
                 </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="notification-item-content dropdown-menu dropdown-menu-lg-end">
+                    <div class="notification-item-content-header">
+                        Kaydedilenler
+                    </div>
+                    <div class="notification-item-content-body">
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="notification-item-content-footer">
+                        <a href="#" class="footer-link"><i class="bi bi-envelope-paper me-2"></i> Hepsi okundu say</a>
+                        <a href="#" class="footer-link">Tümü</a>
+                    </div>
                 </ul>
             </div>
-            <div class="col-3">
-                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="notification-item position-relative" [ngClass]="{ 'px-1': deviceType == 'mobile', 'px-2' : (deviceType == 'desktop' || deviceType == 'tablet' )}">
+                <a href="#" class="dropdown-toggle" role="button" data-bs-toggle="dropdown">
                     <i class="bi bi-bell"></i>
+                    <span class="position-absolute translate-middle badge badge-font-size rounded-pill bg-danger">99+</span>
                 </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="notification-item-content dropdown-menu dropdown-menu-lg-end">
+                    <div class="notification-item-content-header">
+                        Bildirimler
+                    </div>
+                    <div class="notification-item-content-body">
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="header">
+                                    <span class="title pe-2">Yeni Yorum</span>
+                                    <span class="time">1 saat önce</span>
+                                </div>
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                </div>
+                                <hr>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="notification-item-content-footer">
+                        <a href="#" class="footer-link"><i class="bi bi-envelope-paper me-2"></i> Hepsi okundu say</a>
+                        <a href="#" class="footer-link">Tümü</a>
+                    </div>
                 </ul>
             </div>
-            <div class="col-3">
-                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+            <div class="ps-2">
+                <a href="#">
+                    <img [src]="profileImageUrl" width="32" height="32" class="rounded-circle">
+                  </a>
             </div>
         </div>
     </div>

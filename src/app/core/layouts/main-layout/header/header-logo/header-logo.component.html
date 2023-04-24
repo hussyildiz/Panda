@@ -1,12 +1,10 @@
-<div class="row mt-2">
-    <div class="col-6">
-        <img src="/assets/images/logo/panda.png" class="img-fluid" alt="Panda">
+<div class="row d-flex align-items-center mt-2">
+    <div [ngClass]="{ 'col-12': deviceType == 'mobile', 'col-6' : (deviceType == 'desktop' || deviceType == 'tablet')}">
+        <img src="/assets/images/logo/panda-logo.png" class="img-fluid my-2" alt="Panda">
     </div>
-    <ul class="nav col-6 justify-content-end d-none d-sm-flex">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Link 1</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Link 2</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Link 3</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Link 4</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Link 5</a></li>
+    <ul *ngIf="deviceType != 'mobile'" class="col-6 nav justify-content-end pe-0">
+        <li class="nav-item" *ngFor="let item of menuLinkData; let i=index">
+            <a href="#" class="nav-link pe-0">{{ item.Name }}</a>
+        </li>
     </ul>
 </div>

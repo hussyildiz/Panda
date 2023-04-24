@@ -1,0 +1,11 @@
+@import "/src/assets/styles/panda-variables.scss";
+
+.nav-link{
+    font-size: 12px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 0.4px;
+    color: $fills-secondary-gray-secondary;
+}
