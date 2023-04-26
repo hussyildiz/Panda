@@ -7,6 +7,7 @@ import { SweetAlert2Module } from "@sweetalert2/ngx-sweetalert2";
 import { NgxLoadingModule } from "ngx-loading";
 import { MainRoutes } from "../layouts/main-layout/main.routing";
 import { DashboardComponent } from "src/app/features/main-pages/dashboard/dashboard.component";
+import { ComponentsModule } from "./components.module";
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { DashboardComponent } from "src/app/features/main-pages/dashboard/dashbo
     ],
     imports: [
         CommonModule,
+        ComponentsModule,
         RouterModule.forChild(MainRoutes),
         FormsModule,
         ReactiveFormsModule,
