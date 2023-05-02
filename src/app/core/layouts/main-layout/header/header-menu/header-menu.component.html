@@ -10,7 +10,7 @@
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="dashboard">Dashboard</a>
+            <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/panda/dashboard">Dashboard</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Menü 1</a>
@@ -40,77 +40,26 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Menü 2</a>
+            <a class="nav-link dropdown-toggle" routerLinkActive="active" routerLink="/layoutlar" data-bs-toggle="dropdown" aria-expanded="false">Layoutlar</a>
             <ul class="dropdown-menu main-menu">
-              <li><a class="dropdown-item" href="#">Alt Menü 1</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü 2</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü 3</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü Alt Menü 4</a></li>
-              <li><a class="dropdown-item"> Açılır Menü 2 <i class="bi bi-arrow-right"></i></a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                  <li><a class="dropdown-item" >Submenu item 3 <i class="bi bi-arrow-right"></i> </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="#">Alt Menü 1</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü 2</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü 3</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü Alt Menü 4</a></li>
+              <li><a class="dropdown-item" routerLink="/layoutlar/sayfa-layout-1">Sayfa Layout - 1</a></li>
+              <li><a class="dropdown-item" routerLink="/layoutlar/sayfa-layout-2">Sayfa Layout - 2</a></li>
+              <li><a class="dropdown-item" routerLink="/layoutlar/sayfa-layout-3">Sayfa Layout - 3</a></li>
             </ul>
           </li>
+          
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Menü 3</a>
-            <ul class="dropdown-menu main-menu">
-              <li><a class="dropdown-item" href="#">Alt Menü 1</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü 2</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü 3</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü Alt Menü 4</a></li>
-              <li><a class="dropdown-item"> Açılır Menü 2 <i class="bi bi-arrow-right"></i></a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                  <li><a class="dropdown-item" >Submenu item 3 <i class="bi bi-arrow-right"></i> </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="#">Alt Menü 1</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü 2</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü 3</a></li>
-              <li><a class="dropdown-item" href="#">Alt Menü Alt Menü Alt Menü Alt Menü 4</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="menu">Menü 4</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="menu">Menü 5</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Componentler</a>
+            <a class="nav-link dropdown-toggle" routerLinkActive="active" routerLink="/componentler" data-bs-toggle="dropdown" aria-expanded="false">Componentler</a>
             <ul class="dropdown-menu main-menu">
               <li><a class="dropdown-item"> Bootstrap <i class="bi bi-arrow-right"></i></a>
                 <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Accordion</a></li>
-                  <li><a class="dropdown-item" href="#">Alerts</a></li>
-                  <li><a class="dropdown-item" href="#">Badges</a></li>
-                  <li><a class="dropdown-item" href="#">Breadcrumb</a></li>
-                  <li><a class="dropdown-item" href="#">Buttons</a></li>
-                  <li><a class="dropdown-item" href="#">Button group</a></li>
-                  <li><a class="dropdown-item" href="#">Cards</a></li>
+                  <li><a class="dropdown-item" routerLink="/componentler/bootstrap/bootstrap-accordion">Accordion</a></li>
+                  <li><a class="dropdown-item" routerLink="/componentler/bootstrap/bootstrap-alerts">Alerts</a></li>
+                  <li><a class="dropdown-item" routerLink="/componentler/bootstrap/bootstrap-badges">Badges</a></li>
+                  <li><a class="dropdown-item" routerLink="/componentler/bootstrap/bootstrap-breadcrumb">Breadcrumb</a></li>
+                  <li><a class="dropdown-item" routerLink="/componentler/bootstrap/bootstrap-buttons">Buttons</a></li>
+                  <li><a class="dropdown-item" routerLink="/componentler/bootstrap/bootstrap-button-group">Button group</a></li>
+                  <li><a class="dropdown-item" routerLink="/componentler/bootstrap/bootstrap-cards">Cards</a></li>
                 </ul>
               </li>
               <li><a class="dropdown-item"> NG Bootstrap <i class="bi bi-arrow-right"></i></a>

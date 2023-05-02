@@ -1,6 +1,6 @@
 <div class="row d-flex align-items-center mt-2">
     <div [ngClass]="{ 'col-12': deviceType == 'mobile', 'col-6' : (deviceType == 'desktop' || deviceType == 'tablet')}">
-        <img src="/assets/images/logo/panda-logo.png" class="img-fluid my-2" alt="Panda">
+        <a routerLink="/panda/dashboard"><img src="/assets/images/logo/panda-logo.png" class="img-fluid my-2" alt="Panda"></a>
     </div>
     <ul *ngIf="deviceType != 'mobile'" class="col-6 nav justify-content-end pe-0">
         <li class="nav-item" *ngFor="let item of menuLinkData; let i=index">

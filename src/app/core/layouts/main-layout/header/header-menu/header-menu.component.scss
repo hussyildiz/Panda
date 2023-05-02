@@ -71,6 +71,10 @@
                         align-items: center;
                         justify-content: space-between;
                     }
+
+                    .dropdown-item.active, .dropdown-item:active{
+                        background-color: #f1f1f1
+                    }
                 }  
             }
 

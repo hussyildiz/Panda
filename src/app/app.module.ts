@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthLayoutComponent } from './core/layouts/auth-layout/auth-layout.component';
 import { MainLayoutComponent } from './core/layouts/main-layout/main-layout.component';
-import { LayoutModule } from './core/modules/layout.module';
+import { LayoutModule } from './core/modules/common/layout.module';
 
 @NgModule({
   declarations: [

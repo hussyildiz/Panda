@@ -13,6 +13,6 @@ export class LoginComponent {
   }
 
   onClickLogin(){
-    this.router.navigateByUrl("/main");
+    this.router.navigateByUrl("/panda");
   }
 }

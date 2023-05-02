@@ -1,0 +1,40 @@
+@import "/src/assets/styles/panda-variables.scss";
+
+.breadcrumb-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-height: 50px;
+    border-bottom: 1px solid $fills-secondary-gray-tertiary;
+    margin-bottom: 20px;
+
+    .breadcrumb{
+        margin-bottom: 0px;
+
+        font-size: 12px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: 0.4px;
+
+        .breadcrumb-item a{
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.4px;
+            color: $illustration-grey-04;
+        }
+
+        .breadcrumb-item.active{
+            color: $illustration-grey-04;
+        }
+    }
+}
